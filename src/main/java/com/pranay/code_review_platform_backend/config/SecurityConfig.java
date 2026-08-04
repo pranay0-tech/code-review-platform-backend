@@ -29,19 +29,26 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
-                .csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/register", "/login").permitAll()
-                        .anyRequest().authenticated()
-                )
-                .sessionManagement(session ->
-        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-)
-.authenticationProvider(authenticationProvider())
-.addFilterBefore(
-        jwtAuthenticationFilter,
-        UsernamePasswordAuthenticationFilter.class
-);
+    .csrf(csrf -> csrf.disable())
+    .authorizeHttpRequests(auth -> auth
+            .requestMatchers(
+                    "/register",
+                    "/login",
+                    "/oauth2/**",
+                    "/login/oauth2/**"
+            ).permitAll()
+            .anyRequest().authenticated()
+    )
+    .oauth2Login(oauth -> {})
+    .sessionManagement(session ->
+            session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+    )
+    .authenticationProvider(authenticationProvider())
+    .addFilterBefore(
+            jwtAuthenticationFilter,
+            UsernamePasswordAuthenticationFilter.class
+    );
+
         return http.build();
     }
 
