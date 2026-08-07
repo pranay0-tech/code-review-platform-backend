@@ -6,7 +6,7 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "github_users")
+@Table(name = "github_accounts")
 @Getter
 @Setter
 @NoArgsConstructor

@@ -4,6 +4,8 @@ package com.pranay.code_review_platform_backend.config;
 import com.pranay.code_review_platform_backend.security.JwtAuthenticationFilter;
 
 import com.pranay.code_review_platform_backend.security.CustomUserDetailsService;
+import com.pranay.code_review_platform_backend.security.GithubOAuth2SuccessHandler;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
@@ -24,6 +27,7 @@ public class SecurityConfig {
     private final CustomUserDetailsService userDetailsService;
     private final PasswordEncoder passwordEncoder;
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final GithubOAuth2SuccessHandler githubOAuth2SuccessHandler;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -39,7 +43,9 @@ public class SecurityConfig {
             ).permitAll()
             .anyRequest().authenticated()
     )
-    .oauth2Login(oauth -> {})
+    .oauth2Login(oauth ->
+        oauth.successHandler(githubOAuth2SuccessHandler)
+)
     .sessionManagement(session ->
             session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
     )
