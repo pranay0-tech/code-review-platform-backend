@@ -1,4 +1,4 @@
-package com.pranay.code_review_platform_backend.security;
+package com.pranay.code_review_platform_backend.service;
 
 import com.pranay.code_review_platform_backend.entity.User;
 import com.pranay.code_review_platform_backend.repository.UserRepository;

@@ -1,7 +1,7 @@
 package com.pranay.code_review_platform_backend.security;
 
 import com.pranay.code_review_platform_backend.entity.GithubUser;
-import com.pranay.code_review_platform_backend.security.service.GithubUserService;
+import com.pranay.code_review_platform_backend.service.GithubUserService;
 import com.pranay.code_review_platform_backend.service.TokenEncryptionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;

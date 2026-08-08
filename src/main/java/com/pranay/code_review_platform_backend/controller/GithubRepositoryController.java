@@ -1,7 +1,8 @@
 package com.pranay.code_review_platform_backend.controller;
 
 import com.pranay.code_review_platform_backend.dto.response.GithubRepositoryResponse;
-import com.pranay.code_review_platform_backend.security.service.GithubRepositoryService;
+import com.pranay.code_review_platform_backend.service.GithubRepositoryService;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

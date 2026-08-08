@@ -32,6 +32,8 @@ public class Repository {
 
     private LocalDateTime createdAt;
 
+    private String localPath;
+
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();

@@ -1,9 +1,11 @@
 package com.pranay.code_review_platform_backend.controller;
 
 import com.pranay.code_review_platform_backend.dto.request.ConnectRepositoryRequest;
+import com.pranay.code_review_platform_backend.dto.response.CloneRepositoryResponse;
 import com.pranay.code_review_platform_backend.entity.Repository;
 import com.pranay.code_review_platform_backend.service.RepositoryService;
 import jakarta.validation.Valid;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +24,15 @@ public class RepositoryController {
             @Valid @RequestBody ConnectRepositoryRequest request) {
 
         Repository repository = repositoryService.connectRepository(request);
-
         return ResponseEntity.ok(repository);
+    }
+
+    @PostMapping("/clone/{id}")
+    public ResponseEntity<CloneRepositoryResponse> cloneRepository(@PathVariable Long id) throws Exception {
+
+        // Service returns CloneRepositoryResponse directly
+        CloneRepositoryResponse response = repositoryService.cloneRepository(id);
+
+        return ResponseEntity.ok(response);
     }
 }

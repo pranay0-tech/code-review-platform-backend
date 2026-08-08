@@ -2,8 +2,7 @@
 
 package com.pranay.code_review_platform_backend.config;
 import com.pranay.code_review_platform_backend.security.JwtAuthenticationFilter;
-
-import com.pranay.code_review_platform_backend.security.CustomUserDetailsService;
+import com.pranay.code_review_platform_backend.service.CustomUserDetailsService;
 import com.pranay.code_review_platform_backend.security.GithubOAuth2SuccessHandler;
 
 import lombok.RequiredArgsConstructor;
