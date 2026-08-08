@@ -1,8 +1,8 @@
-package com.pranay.code_review_platform_backend.service.impl;
+package com.pranay.code_review_platform_backend.security.service.impl;
 
 import com.pranay.code_review_platform_backend.entity.GithubUser;
 import com.pranay.code_review_platform_backend.repository.GithubUserRepository;
-import com.pranay.code_review_platform_backend.service.GithubUserService;
+import com.pranay.code_review_platform_backend.security.service.GithubUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.pranay.code_review_platform_backend.service;
+package com.pranay.code_review_platform_backend.security.service;
 
 import com.pranay.code_review_platform_backend.entity.GithubUser;
 

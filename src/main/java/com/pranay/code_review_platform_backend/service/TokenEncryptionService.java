@@ -1,6 +1,7 @@
 package com.pranay.code_review_platform_backend.service;
 
 import org.springframework.stereotype.Service;
+import com.pranay.code_review_platform_backend.entity.Repository;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
