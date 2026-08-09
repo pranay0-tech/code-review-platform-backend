@@ -92,8 +92,14 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+    <groupId>com.github.javaparser</groupId>
+    <artifactId>javaparser-core</artifactId>
+    <version>3.27.0</version>
+       </dependency>
 		<!-- JWT -->
-<dependency>
+     <dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-api</artifactId>
     <version>0.11.5</version>
