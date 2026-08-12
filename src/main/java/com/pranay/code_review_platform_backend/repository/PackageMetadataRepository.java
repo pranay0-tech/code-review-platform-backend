@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public interface PackageMetadataRepository
         extends JpaRepository<PackageMetadata, Long> {
+                long countByRepositoryId(Long repositoryId);
 
     Optional<PackageMetadata> findByRepositoryIdAndPackageName(
             Long repositoryId, 

@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MethodMetadataRepository
         extends JpaRepository<MethodMetadata, Long> {
+                 long countByRepositoryId(Long repositoryId);
 }
