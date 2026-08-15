@@ -28,6 +28,42 @@ public class PromptTemplates {
             %s
             """;
 
+            public static final String PROJECT_OVERVIEW = """
+        You are a senior software architect.
+
+        Analyze the repository metadata and generate a clear
+        high-level overview of the project.
+
+        Include the following sections:
+
+        1. Project Overview
+        2. Architecture
+        3. Technology Stack
+        4. Major Modules
+        5. Authentication
+        6. Database
+        7. External Integrations
+
+        Class metadata:
+        %s
+
+        Package metadata:
+        %s
+
+        Technology metadata:
+        %s
+
+        Requirements:
+        - Explain the overall architecture.
+        - Identify major modules and their responsibilities.
+        - Explain authentication if present.
+        - Explain database usage if present.
+        - Identify external integrations.
+        - Do not invent technologies or components.
+        - Keep the explanation understandable to a developer
+          who is seeing the repository for the first time.
+        """;
+
 
     public static final String API_DISCOVERY = """
             You are an expert backend engineer.
@@ -173,3 +209,5 @@ public class PromptTemplates {
             %s
             """;
 }
+
+
