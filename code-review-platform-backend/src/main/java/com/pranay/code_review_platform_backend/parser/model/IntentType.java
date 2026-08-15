@@ -13,6 +13,12 @@ public enum IntentType {
     DEPENDENCY_ANALYSIS,
 
     TECH_STACK_ANALYSIS,
+     ARCHITECTURE_ANALYSIS,
 
     GENERAL_QA
 }
+
+
+
+
+  
