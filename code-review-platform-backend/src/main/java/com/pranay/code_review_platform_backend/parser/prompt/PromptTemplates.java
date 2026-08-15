@@ -208,6 +208,40 @@ public class PromptTemplates {
             User question:
             %s
             """;
+
+            public static final String DEVELOPER_ONBOARDING = """
+        You are a senior software architect helping a new developer
+        understand an unfamiliar repository.
+
+        Create a practical onboarding path.
+
+        Start with the most important entry points and business logic.
+
+        Then recommend the infrastructure and supporting components
+        the developer should explore.
+
+        Repository architecture:
+        %s
+
+        Class metadata:
+        %s
+
+        Dependency information:
+        %s
+
+        Technology information:
+        %s
+
+        Requirements:
+        1. Recommend an ordered learning path.
+        2. Explain why each component should be explored.
+        3. Start with important entry points.
+        4. Follow important dependency relationships.
+        5. Include authentication/security when relevant.
+        6. Include the database layer when relevant.
+        7. Include important external integrations when relevant.
+        8. Do not invent classes or technologies.
+        """;
 }
 
 

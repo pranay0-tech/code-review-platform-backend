@@ -2,6 +2,7 @@ package com.pranay.code_review_platform_backend.parser.service;
 
 import com.pranay.code_review_platform_backend.parser.model.IntentType;
 import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 @Service
 public class IntentDetector {
@@ -46,6 +47,16 @@ public class IntentDetector {
             return IntentType.METHOD_EXPLANATION;
         }
 
+        if (q.contains("new to this project") ||
+    q.contains("where should i start") ||
+    q.contains("where do i start") ||
+    q.contains("how do i understand this project") ||
+    q.contains("onboarding") ||
+    q.contains("new developer")) {
+
+    return IntentType.DEVELOPER_ONBOARDING;
+    }
+
         if (q.contains("class") ||
             q.contains("what does") ||
             q.contains("explain")) {
@@ -54,5 +65,8 @@ public class IntentDetector {
         }
 
         return IntentType.GENERAL_QA;
+
+        
+
     }
 }
