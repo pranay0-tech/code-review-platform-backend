@@ -48,6 +48,7 @@ public class PromptService {
 
             case GENERAL_QA ->
                     PromptTemplates.GENERAL_QA;
+            default -> throw new IllegalArgumentException("Unexpected value: " + intent);
         };
     }
 }
