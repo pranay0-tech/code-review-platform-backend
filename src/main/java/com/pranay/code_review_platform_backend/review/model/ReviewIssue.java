@@ -60,6 +60,7 @@ public class ReviewIssue {
         BUG_RISK,
         LONG_METHOD,
         GOD_CLASS,
-        DEEP_NESTING
+        DEEP_NESTING,
+          HIGH_COMPLEXITY
     }
 }
