@@ -64,7 +64,8 @@ public class ReviewIssue {
           HIGH_COMPLEXITY,
           UNUSED_IMPORT,
           EMPTY_CATCH,
-          MAGIC_NUMBER
+          MAGIC_NUMBER,
+           BAD_NAMING
           
 
     }
