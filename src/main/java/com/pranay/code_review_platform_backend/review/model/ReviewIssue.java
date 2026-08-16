@@ -59,6 +59,7 @@ public class ReviewIssue {
         STYLE,
         BUG_RISK,
         LONG_METHOD,
-        GOD_CLASS
+        GOD_CLASS,
+        DEEP_NESTING
     }
 }
