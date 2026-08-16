@@ -58,6 +58,7 @@ public class ReviewIssue {
         COMPLEXITY,
         STYLE,
         BUG_RISK,
-        LONG_METHOD
+        LONG_METHOD,
+        GOD_CLASS
     }
 }
