@@ -62,6 +62,9 @@ public class ReviewIssue {
         GOD_CLASS,
         DEEP_NESTING,
           HIGH_COMPLEXITY,
-          UNUSED_IMPORT
+          UNUSED_IMPORT,
+          EMPTY_CATCH
+          
+
     }
 }
