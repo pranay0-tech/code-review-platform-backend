@@ -63,7 +63,8 @@ public class ReviewIssue {
         DEEP_NESTING,
           HIGH_COMPLEXITY,
           UNUSED_IMPORT,
-          EMPTY_CATCH
+          EMPTY_CATCH,
+          MAGIC_NUMBER
           
 
     }
